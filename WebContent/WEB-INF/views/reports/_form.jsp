@@ -18,7 +18,7 @@
 <br /><br />
 
 <label for = "title">タイトル</label>
-<input type = "text" name = "report_title" value = "${reports.title}" />
+<input type = "text" name = "title" value = "${report.title}" />
 <br /><br />
 
 <label for = "content">内容</label>
