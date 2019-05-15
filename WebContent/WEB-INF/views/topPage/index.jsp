@@ -29,7 +29,7 @@
                 </c:forEach>
             </tbody>
         </table>
-
+         <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p>
         <div id="pagination">
             （全 ${reports_count} 件）<br />
             <c:forEach var="i" begin="1" end="${((reports_count - 1) / 15) + 1}" step="1">
@@ -43,6 +43,22 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p>
+        <br /><br />
+        <h3>フォロー　一覧</h3>
+        <table id = "follow_list">
+            <tbody>
+                <tr>
+                    <th>氏名</th>
+                    <th>操作</th>
+                </tr>
+                <c:forEach var = "follows" items = "${follows}" varStatus = "status">
+                    <tr class = "row${status.count % 2}">
+                        <td><c:out value = "${follows.follow.name}" /></td>
+                        <td><a href="<c:url value='/follows/show?id=${follows.follow.id}' />">日報を見る</a></td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+
     </c:param>
 </c:import>
