@@ -63,9 +63,10 @@ public class EmployeesCreateServlet extends HttpServlet {
 
                 em.close();
 
+
                 request.setAttribute("_token", _token);
                 request.setAttribute("employee", e);
-                request.setAttribute("errors", errors);
+                request.setAttribute("errors",errors);
 
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/new.jsp");
                 rd.forward(request, response);
