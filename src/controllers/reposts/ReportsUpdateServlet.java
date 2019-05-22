@@ -1,4 +1,4 @@
-package contorollers.reposts;
+package controllers.reposts;
 
 import java.io.IOException;
 import java.sql.Date;
